@@ -6,6 +6,8 @@ proc_name = 'fyle-interview-be'
 port_number = int(os.environ.get('GUNICORN_PORT', 7755))
 bind = '0.0.0.0:{0}'.format(port_number)
 
+print(bind)
+
 backlog      = int(os.environ.get('GUNICORN_BACKLOG', 50))
 workers      = int(os.environ.get('GUNICORN_NUMBER_WORKERS', 1))
 threads      = int(os.environ.get('GUNICORN_NUMBER_WORKER_THREADS', 1))

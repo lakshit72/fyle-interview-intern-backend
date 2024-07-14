@@ -1,0 +1,12 @@
+version: '1.0'
+
+services:
+  web:
+    build: .
+    container_name: fyle_intern
+    ports:
+      - "80:7755"
+    environment:
+      - FLASK_APP=core/server.py
+    volumes:
+      - .:/app/fyle-interview-intern-backend
